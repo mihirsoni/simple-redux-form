@@ -30,10 +30,14 @@ export function createField(field, onChange) {
   };
 }
 export function hasSyncErrors(errors) {
+  let allErrors = errors;
+  if (allErrors == null) {
+    allErrors = {};
+  }
   let hasError = false;
-  const fieldKeys = Object.keys(errors);
+  const fieldKeys = Object.keys(allErrors);
   for (let i = 0; i < fieldKeys.length; i++) {
-    if (errors[fieldKeys[i]] !== undefined) {
+    if (allErrors[fieldKeys[i]] !== undefined) {
       hasError = true;
       break;
     }

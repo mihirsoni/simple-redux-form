@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import deepEqual from 'deep-equal';
-import { setField, initilize, touchAll } from './reducer';
+import { setField, initilize, touchAll } from './actions';
 import { simplifiedVlaues, createField, hasSyncErrors } from './helpers';
 
 // Higher order component for huge fast dynamic deeply nested universal forms.
@@ -32,7 +32,10 @@ export default function simpleReduxForm(Wrapped, options) {
         initilize the form on client side, as we can access storage easily and
         can avoid the Dom difference.
       */
-      const initialState = getInitialState && getInitialState(this.props);
+      let initialState = getInitialState && getInitialState(this.props);
+      if (!initialState) {
+        initialState = {};
+      }
       const state = this.props.currentForm;
       const initilized = state && state.initialized ? state.initialized : false;
       // Make initilized only if object is not empty
@@ -78,9 +81,6 @@ export default function simpleReduxForm(Wrapped, options) {
         fields[field].error = errors && errors[field] ? errors[field] : undefined;
         fields[field].touched = newState && newState[field] ? newState[field].touched : false;
       });
-      if (__DEVELOPMENT__) {
-        console.log('Following errors are here', errors);
-      }
       this.fields = { ...this.fields };
       this.allValid = !hasSyncErrors(errors);
       // this.setState({ model: newState });
@@ -104,7 +104,6 @@ export default function simpleReduxForm(Wrapped, options) {
       this.fields = { ...formFields };
     }
     render() {
-      console.log('current Form is', this.fields);
       return (
         <Wrapped
           {...this.props}
