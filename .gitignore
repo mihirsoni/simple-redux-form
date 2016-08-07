@@ -1,0 +1,9 @@
+.idea/
+node_modules/
+dist/
+lib/
+*.iml
+*.log
+*.logs
+.DS_Store
+npm-debug.log
