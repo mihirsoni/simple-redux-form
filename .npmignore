@@ -1,0 +1,9 @@
+scripts
+docs
+.babelrc
+.eslint*
+.idea
+.editorconfig
+.npmignore
+.travis.yml
+webpack.*

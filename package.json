@@ -1,7 +1,8 @@
 {
   "name": "simple-redux-form",
-  "version": "0.0.1",
-  "description": "This is flat redux form",
+  "version": "0.0.2",
+  "description": "This is simplest redux form",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "npm run build:lib && npm run build:npm && npm run build:min",
     "build:lib": "babel src --out-dir lib",
@@ -9,7 +10,6 @@
     "build:min": "NODE_ENV=production webpack src/index.js dist/simple-redux-form.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "main": "index.js",
   "dependencies": {
     "deep-equal": "^1.0.1",
     "react": "^15.3.0",
