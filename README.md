@@ -1,6 +1,6 @@
 <h1 align="center">Simplest Redux Form</h1>
 
-> Higher order component for React Redux forms (inspired by [redux-form][https://github.com/erikras/redux-form])
+> Higher order component for React Redux forms (inspired by [redux-form](https://github.com/erikras/redux-form))
 
 ## Note 
 
@@ -72,7 +72,13 @@ Each field in the fields prop contains the `value` a `onChange`, `error` , `touc
 
 You can also pass fields as props.
 
-For custom Input components , Library expose , `setValue` function with each field for setting vlaues.
+For custom Input components this library expose , `setValue` function with each field for setting vlaues manually.
+
+
+### Todo
+
+* [ ] Docs
+* [ ] Examples
 
 ## License
 
