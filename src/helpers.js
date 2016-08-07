@@ -1,3 +1,6 @@
+/*
+  This are set of helpers function to make simpleReduxForm work
+*/
 export function getFieldValue(field, formValues) {
   if (formValues && formValues[field]) {
     return formValues[field].value;
