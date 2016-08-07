@@ -1,6 +1,6 @@
 {
   "name": "simple-redux-form",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This is simplest redux form",
   "main": "./lib/index.js",
   "scripts": {
@@ -9,6 +9,10 @@
     "build:npm": "NODE_ENV=development webpack src/index.js dist/simple-redux-form.js",
     "build:min": "NODE_ENV=production webpack src/index.js dist/simple-redux-form.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihirsoni/simple-redux-form.git"
   },
   "dependencies": {
     "deep-equal": "^1.0.1",
