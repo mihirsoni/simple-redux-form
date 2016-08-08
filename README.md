@@ -42,7 +42,7 @@ You need to decorate your component with simpleReduxForm.
 
 ```js
 import simpleReduxForm from 'simple-redux-form'
-const fiels = ['firstName', 'lastName'];
+const fields = ['firstName', 'lastName'];
 function validate(values) {
   const errors = {};
   if (!values.firstName) {
