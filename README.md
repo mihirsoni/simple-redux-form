@@ -79,7 +79,8 @@ For custom Input components this library expose , `setValue` function with each 
 
 * [ ] Docs
 * [ ] Examples
+* [ ] Test Cases
 
 ## License
 
-MIT © Mihir Soni
+MIT
