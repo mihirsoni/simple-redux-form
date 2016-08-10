@@ -1,6 +1,6 @@
 {
   "name": "simple-redux-form",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This is simplest redux form",
   "main": "./lib/index.js",
   "scripts": {
@@ -14,6 +14,24 @@
     "type": "git",
     "url": "git+https://github.com/mihirsoni/simple-redux-form.git"
   },
+  "keywords": [
+     "react",
+     "reactjs",
+     "flux",
+     "redux",
+     "react-redux",
+     "tiny-redux-form",
+     "simple-redux-form",
+     "small-redux-form",
+     "redux-form",
+     "redux-form-validations",
+     "forms",
+     "decorator"
+  ],
+  "bugs": {
+      "url": "https://github.com/mihirsoni/simple-redux-form/issues"
+  },
+  "npmName": "simple-redux-form",
   "dependencies": {
     "deep-equal": "^1.0.1",
     "react": "^15.3.0",
