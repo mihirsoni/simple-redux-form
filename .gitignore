@@ -2,6 +2,7 @@
 node_modules/
 dist/
 lib/
+coverage/
 *.iml
 *.log
 *.logs
