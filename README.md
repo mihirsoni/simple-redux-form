@@ -4,16 +4,16 @@
 
 ## Note 
 
-Idea of this library is 100% inspired from `redux-form` (v5).
+Idea of this library is 100% inspired from [redux-form](https://github.com/erikras/redux-form) (v5).
 
-This library is subset of `redux-form` for small / few forms.
-If your application is form heavey with huge form please go and install  `redux-form`.
+This library is subset of [redux-form](https://github.com/erikras/redux-form) for small / few forms.
+If your application is form heavey with large / complex form please use [redux-form](https://github.com/erikras/redux-form).
 
-I have implemented this libray for reasons :- 
+I have implemented this libray for following reasons :- 
 
-* `redux-form` is great idea of doing form stuffs and I still use `redux-form` if my application is form heavey.
-* For small forms I still wanted to use the same way , but `redux-form` was heavey for small / few forms.
-* Scope of the librar will be very minimal, if you want full fledge library please use `redux-form`.
+* [redux-form](https://github.com/erikras/redux-form) is great way of managing forms within application with react and redux.
+* For small forms using large library will add up unnecessary bundle size increase, this library focus on simple and small version of `redux-from`
+* Scope of this library will be very minimal, if you want full fledge library please use `redux-form`.
 
 ## Installation
 
