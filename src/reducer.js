@@ -1,4 +1,4 @@
-import { INITIALIZE, DISTROY, SET_FIELD, TOUCH_ALL } from './actionTypes';
+import { INITIALIZE, DESTROY, SET_FIELD, TOUCH_ALL } from './actionTypes';
 
 const initialState = {};
 
@@ -17,7 +17,7 @@ export default function reducer(state = initialState, action) {
           initialized: true,
         }
       };
-    case DISTROY : {
+    case DESTROY : {
       const updateDState = { ...state };
       delete updateDState[action.form];
       return {

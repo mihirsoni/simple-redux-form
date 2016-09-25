@@ -2,13 +2,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import expect from 'expect';
 import deepFreeze from 'deep-freeze';
-import { initilize, setField, touchAll, distroy } from '../actions.js';
+import { initialize, setField, touchAll, destroy } from '../actions.js';
 import reducer from '../reducer';
 
 describe('reducers', () => {
   it('should initial from with fields and given values', () => {
     const stateBefore = {};
-    const action = initilize(
+    const action = initialize(
       { field1: 'foo', field2: 'bar', field3: 'baz' },
       'mockedForm',
       ['field1', 'field2', 'field3']);
@@ -103,7 +103,7 @@ describe('reducers', () => {
         viewState: 'VIEW_ALL'
       }
     };
-    const action = distroy('mockedForm');
+    const action = destroy('mockedForm');
     const stateAfter = {
       otherState: {
         viewState: 'VIEW_ALL'

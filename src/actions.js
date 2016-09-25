@@ -1,6 +1,6 @@
-import { INITIALIZE, DISTROY, SET_FIELD, TOUCH_ALL } from './actionTypes';
+import { INITIALIZE, DESTROY, SET_FIELD, TOUCH_ALL } from './actionTypes';
 
-export function initilize(initialValue, form, fields) {
+export function initialize(initialValue, form, fields) {
   return {
     type: INITIALIZE,
     initialValue,
@@ -21,8 +21,8 @@ export function touchAll(form, fields) {
   };
 }
 
-export function distroy(form) {
+export function destroy(form) {
   return {
-    type: DISTROY, form
+    type: DESTROY, form
   };
 }

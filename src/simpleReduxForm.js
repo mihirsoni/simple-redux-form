@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import deepEqual from 'deep-equal';
-import { setField, initilize, touchAll } from './actions';
+import { setField, initialize, touchAll } from './actions';
 import { simplifiedVlaues, createField, hasSyncErrors } from './helpers';
 
 // Higher order component for huge fast dynamic deeply nested universal forms.
@@ -29,7 +29,7 @@ export default function simpleReduxForm(Wrapped, options) {
     }
     componentDidMount() {
       /*
-        initilize the form on client side, as we can access storage easily and
+        initialize the form on client side, as we can access storage easily and
         can avoid the Dom difference.
       */
       let initialState = getInitialState && getInitialState(this.props);
@@ -37,10 +37,10 @@ export default function simpleReduxForm(Wrapped, options) {
         initialState = {};
       }
       const state = this.props.currentForm;
-      const initilized = state && state.initialized ? state.initialized : false;
-      // Make initilized only if object is not empty
-      if (!initilized && Object.keys(initialState).length > 0) {
-        this.props.actions.initilize(initialState, form, this.props.fields);
+      const initialized = state && state.initialized ? state.initialized : false;
+      // Make initialized only if object is not empty
+      if (!initialized && Object.keys(initialState).length > 0) {
+        this.props.actions.initialize(initialState, form, this.props.fields);
         this.setModel();
       }
     }
@@ -55,11 +55,11 @@ export default function simpleReduxForm(Wrapped, options) {
       }
       // Need to compare and then do this thing
       const state = this.props.currentForm;
-      const initilized = state && state.initialized ? state.initialized : false;
-      if (!initilized) {
+      const initialized = state && state.initialized ? state.initialized : false;
+      if (!initialized) {
         const initialState = getInitialState && getInitialState(nextProps);
         if (initialState) {
-          this.props.actions.initilize(initialState, form, this.props.fields);
+          this.props.actions.initialize(initialState, form, this.props.fields);
         }
       }
     }
@@ -131,7 +131,7 @@ export default function simpleReduxForm(Wrapped, options) {
     return {
       actions: bindActionCreators({
         setField,
-        initilize,
+        initialize,
         touchAll,
       }, dispatch),
       dispatch
