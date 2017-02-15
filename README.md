@@ -61,10 +61,11 @@ const MyNewForm = ({ fields: {firstName, lastName } }) => (
   </form>
 )
 
-export default simpleReduxForm({
-  fields: fields,
-  validate: validate,
-})(MyNewForm)
+export default simpleReduxForm(MyForm, { 
+  form: 'test'
+  fields, 
+  validate,
+});
 
 ```
 
@@ -79,7 +80,6 @@ For custom Input components this library expose , `setValue` function with each 
 
 * [ ] Docs
 * [ ] Examples
-* [ ] Test Cases
 
 ## License
 
